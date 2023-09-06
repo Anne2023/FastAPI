@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from  model import Gender, Role, User
 from uuid import UUID
 from fastapi import HTTPException
+from model import UpdateUser
 
 
 app = FastAPI()
