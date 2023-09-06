@@ -13,12 +13,12 @@ class Role(str, Enum):
   user = "user"
 class User(BaseModel): #classe user estende basemodel, sendo então importada de pydantic
   id: Optional[UUID] = uuid4()
-  primeiro_nome: str
-  ultimo_nome: str
-  gender: Gender
-  roles: List[Role]
+  primeiro_nome: str #primeiro nome do usuario
+  ultimo_nome: str #ultimo nome do usuario
+  gender: Gender #genero do usuario
+  roles: List[Role] #lista com funções admin e user
 
-class UpdateUser(BaseModel):
+class UpdateUser(BaseModel): #classe user estende basemodel, sendo então importada de pydantic
   primeiro_nome: Optional[str]
   ultimo_nome: Optional[str]
   roles: Optional[List[Role]]
