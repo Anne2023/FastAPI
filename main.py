@@ -45,7 +45,8 @@ async def root():
 
 @app.get("/api/v1/users") #esse código define o endpoint para enviar um novo usuario e recorreu ao decorador @app.post para criar o metodo POST
 async def get_users():
-  return bd
+  return print(bd)
+
 
 @app.post("/api/v1/users")
 async def create_user(user: User): # criei a função creat_user que aceita user do modelo user e adicionei um recemcriado user ao banco de dados, para retornar o endpoit em objeto json
